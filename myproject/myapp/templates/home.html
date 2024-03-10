@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #8aa9c9; /* Grey background color */
+        }
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set height as per your requirement */
+        }
+        .center-image img {
+            max-width: 75%;
+            max-height: 75%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to our homepage!</h1>
-    {% load static %}
-    <img src="{% static 'image.jpg' %}" alt="Static Image">
+    <div class="container">
+        <h1>Welcome to Dhaka Restaurant!</h1>
+        <div class="center-image">
+            {% load static %}
+            <img src="{% static 'image.jpg' %}" alt="Static Image" class="img-fluid">
+        </div>
+    </div>
+    
 </body>
 </html>
